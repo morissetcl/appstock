@@ -1,3 +1,3 @@
 class Book < ApplicationRecord
-  has_many :changes
+  has_many :flows
 end
