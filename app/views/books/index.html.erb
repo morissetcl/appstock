@@ -1,0 +1,24 @@
+<h3>Index Books</h3>
+
+<div class="index-wrapper">
+  <div class="tab-content">
+    <table class="fixed_headers">
+      <thead>
+        <tr>
+          <th>Isbn</th>
+          <th>Book</th>
+          <th>Quantity</th>
+        </tr>
+      </thead>
+      <% @books.each do |book|%>
+      <tbody>
+        <tr>
+          <td><%= book.isbn%></td>
+          <td><%= book.title%></td>
+          <td><%= book.quantity%></td>
+        </tr>
+      </tbody>
+      <%end%>
+    </table>
+  </div>
+</div>
