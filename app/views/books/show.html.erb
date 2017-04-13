@@ -1,7 +1,15 @@
+<h3 class="text-center"><%= @book.title%></h3>
+<%= link_to books_path do%>
+  <i class="fa fa-arrow-left fa-3x" aria-hidden="true"></i>
+<%end%>
+<div class="book-info">
+  <%= @book.isbn%>
+  <%= @book.quantity%>
+</div>
 
 
-<div class="index-wrapper">
-  <div class="tab-content">
+<div class="index-wrapper ">
+  <div class="tab-content ">
     <table class="fixed_headers">
       <thead>
         <tr>
@@ -21,4 +29,8 @@
       <%end%>
     </table>
   </div>
+</div>
+
+<div class="form-wrapper">
+  <%= render "flows/new"%>
 </div>

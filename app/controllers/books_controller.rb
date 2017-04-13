@@ -6,7 +6,9 @@ class BooksController < ApplicationController
   end
 
   def show
+    @flow = Flow.new
     @flows = Flow.where(book_id: @book.id)
+
   end
 
   private

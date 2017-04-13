@@ -1,0 +1,7 @@
+<div class="form-content text-center">
+  <%= simple_form_for([@book, @flow]) do |f| %>
+    <%= f.input :oldQuantity, label: "Previous stock" %>
+    <%= f.input :newQuantity, label: "Last stock"%>
+    <%= f.submit "Update stock", class: "calltoaction-form" %>
+  <% end %>
+</div>
