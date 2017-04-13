@@ -13,7 +13,9 @@
       <% @books.each do |book|%>
       <tbody>
         <tr>
-          <td><%= book.isbn%></td>
+          <td> <%= link_to book_path(book) do %>
+            <%= book.isbn%></td>
+            <%end%>
           <td><%= book.title%></td>
           <td><%= book.quantity%></td>
         </tr>
