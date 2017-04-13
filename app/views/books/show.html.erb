@@ -1,3 +1,24 @@
-<%= @book.isbn%>
-<%= @book.title%>
-<%= @book.quantity%>
+
+
+<div class="index-wrapper">
+  <div class="tab-content">
+    <table class="fixed_headers">
+      <thead>
+        <tr>
+          <th>Updated at</th>
+          <th>Previous Stock</th>
+          <th>New Stock</th>
+        </tr>
+      </thead>
+      <% @flows.each do |flow|%>
+      <tbody>
+        <tr>
+          <td><%= flow.created_at.strftime("%m-%e-%y %H:%M") %></td>
+          <td><%= flow.oldQuantity%></td>
+          <td><%= flow.newQuantity%></td>
+        </tr>
+      </tbody>
+      <%end%>
+    </table>
+  </div>
+</div>
