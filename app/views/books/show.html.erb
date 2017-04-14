@@ -4,9 +4,10 @@
 <%end%>
 <div class="book-info">
   <%= @book.isbn%>
-  <%= @previous_quantity%>
+  <div id="currentStock">
+      <%= render "flows/stock"%>
+  </div>
 </div>
-
 
 <div class="index-wrapper"  >
   <table class="fixed_headers" id="flows">
@@ -22,7 +23,6 @@
     <%end%>
   </table>
 </div>
-
 
 <div class="form-wrapper">
   <%= render "flows/new", book: @book, flow: @flow%>
