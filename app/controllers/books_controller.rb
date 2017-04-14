@@ -7,7 +7,9 @@ class BooksController < ApplicationController
 
   def show
     @flow = Flow.new
-    @flows = Flow.bookFlows(@book.id)
+    @flows = @book.flows.select do |book|
+     book.persisted?
+    end
     @previous_quantity = @flows.empty? ? '0' : @flows.last.newQuantity
   end
 
