@@ -6,14 +6,21 @@ class FlowsController < ApplicationController
   end
 
   def create
-    @flow = Flow.new(flow_params)
     @book = Book.find(params[:book_id])
+    @flow = Flow.new(flow_params)
+    @flow = @book.flows.build(flow_params)
     @flow.book = @book
     if @flow.save
       @book.update(quantity: @flow.newQuantity)
-      redirect_to book_path(@book)
+      respond_to do |format|
+        format.html { redirect_to book_path(@book) }
+        format.js { }
+      end
     else
-      redirect_to book_path(@book)
+      respond_to do |format|
+        format.html { render "flows/show" }
+        format.js { }
+      end
     end
   end
 

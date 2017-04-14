@@ -1,5 +1,5 @@
 <div class="form-content text-center">
-  <%= simple_form_for([@book, @flow]) do |f| %>
+  <%= simple_form_for([@book, @flow], remote: true) do |f| %>
     <%= f.input :oldQuantity, label: "Previous stock", input_html: {value: f.object.oldQuantity ||  @previous_quantity } %>
     <%= f.input :newQuantity, label: "New stock"%>
     <%= f.submit "Update stock", class: "calltoaction-form" %>
