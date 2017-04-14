@@ -1,5 +1,5 @@
 class BooksController < ApplicationController
-  before_action :set_book, only: [:show]
+  before_action :set_book, only: [ :show]
 
   def index
     @books = Book.all
@@ -7,8 +7,8 @@ class BooksController < ApplicationController
 
   def show
     @flow = Flow.new
-    @flows = Flow.where(book_id: @book.id)
-
+    @flows = Flow.bookFlows(@book.id)
+    @previous_quantity = @flows.empty? ? '0' : @flows.last.newQuantity
   end
 
   private

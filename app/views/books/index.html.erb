@@ -17,7 +17,7 @@
             <%= book.isbn%></td>
             <%end%>
           <td><%= book.title%></td>
-          <td><%= book.quantity%></td>
+          <td><%= book.flows.empty? ? "0" : book.flows.last.newQuantity %></td>
         </tr>
       </tbody>
       <%end%>
