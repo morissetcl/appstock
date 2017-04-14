@@ -1,0 +1,6 @@
+<% 1.upto(1) do |i| %>
+book_<%= i %>:
+  id: 1
+  isbn: <%=Faker::Number.number(4)%>
+  title: <%= Faker::Superhero.power %>
+<% end %>

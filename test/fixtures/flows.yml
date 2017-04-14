@@ -1,0 +1,6 @@
+<% 1.upto(3) do |i| %>
+flow_<%= i %>:
+  book_id: 1
+  oldQuantity: <%= Faker::Number.between(2, 15)%>
+  newQuantity: <%=Faker::Number.between(2, 15)%>
+<% end %>
