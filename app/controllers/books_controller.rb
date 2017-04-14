@@ -8,6 +8,8 @@ class BooksController < ApplicationController
 
   def show
     @flow = Flow.new
+    # add default value to new_flow form at previous_stock field
+    @previous_quantity = @flows.empty? ? '0' : @flows.last.newQuantity
   end
 
   private
