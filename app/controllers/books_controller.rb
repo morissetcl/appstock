@@ -8,9 +8,6 @@ class BooksController < ApplicationController
 
   def show
     @flow = Flow.new
-    # @previousQuantity1 = @flows.empty? ? '0' : @flows.last.newQuantity
-    @previousQuantity = @book.flows.last.newQuantity
-
   end
 
   private

@@ -1,7 +1,7 @@
 class FlowsController < ApplicationController
+  before_action :set_book, only: [:index]
 
   def index
-    set_book
     @flow = Flow.where(book_id: @book)
   end
 
