@@ -3,7 +3,10 @@
   <i class="fa fa-arrow-left fa-3x" aria-hidden="true"></i>
 <%end%>
 <div class="book-info">
-  <%= @book.isbn%>
+  <div class="isbn-wrapper text-center">
+    <p>ISBN</p>
+    <p class="isbn"><%= @book.isbn%></p>
+  </div>
   <div id="currentStock">
       <%= render "flows/stock"%>
   </div>
