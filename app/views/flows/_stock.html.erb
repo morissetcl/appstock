@@ -1,9 +1,12 @@
-<%if @flow.newQuantity.nil? %>
-  <div class="start-counter">
-    <td ><%= @book.flows.last.newQuantity%></td>
-  </div>
-<%else%>
-  <div class="counter">
-    <td><%= @flow.newQuantity%></td>
-  </div>
-<%end%>
+<div class="counter text-center">
+  <p>Stock</p>
+  <%if @flow.newQuantity.nil? %>
+    <div class="start-counter">
+      <td ><%= @book.flows.last.newQuantity%></td>
+    </div>
+  <%else%>
+    <div class="current-counter">
+      <td><%= @flow.newQuantity%></td>
+    </div>
+  <%end%>
+</div>

@@ -4,12 +4,26 @@
   margin-top: 50px;
 }
 
+.isbn{
+  background-color: white;
+  border: 2px solid #61105E;
+  border-radius: 30px;
+  width: auto;
+  padding-left: 10px;
+  padding-right: 10px;
+  color: #61105E;
+}
+
 .book-info{
   display: flex;
-  justify-content: center;
+  justify-content: space-around;
   margin-bottom: 50px;
 }
 
 .fa-arrow-left{
   margin-left: 30px;
+  color: #61105E;
+    &:hover {
+      color: #C3195D;
+    }
 }
