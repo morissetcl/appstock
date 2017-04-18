@@ -11,7 +11,7 @@ module AppStock
         # Récupération de la collection de toutes les voitures grâce à ActiveRecord
         get do
           books = Book.all
-          present books, with: AppStock::Entities::Book
+          present books
         end
 
         desc "Return a book"
