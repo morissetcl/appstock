@@ -11,7 +11,7 @@ module AppStock
         # Récupération de la collection de toutes les voitures grâce à ActiveRecord
         get do
           books = Book.all
-          present books, with: AppStock::Entities::Book
+          present books
         end
 
         desc "Return a book"
@@ -21,7 +21,8 @@ module AppStock
         end
         route_param :id do
           get do
-            Book.find(params[:id]).flows
+            book = Book.find(params[:id])
+            present book, with: AppStock::Entities::Book
           end
         end
       end
