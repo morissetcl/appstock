@@ -7,6 +7,8 @@ gem 'pg'
 gem 'figaro'
 gem 'jbuilder', '~> 2.0'
 gem 'redis'
+gem 'devise'
+gem "pundit"
 
 gem 'sass-rails'
 gem 'jquery-rails'
@@ -20,6 +22,8 @@ gem 'autoprefixer-rails'
 gem 'grape'
 gem 'hashie-forbidden_attributes'
 gem 'grape-entity'
+gem "simple_token_authentication"
+
 
 group :development, :test do
   gem 'binding_of_caller'
