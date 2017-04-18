@@ -27,18 +27,14 @@ module AppStock
         end
       end
 
-      # desc "update a book author"
-      # params do
-      #   requires :id, type: Integer, desc: "Book Id"
-      # end
-      # route_param :id do
-      #   patch do
-      #   Book.find(params[:id]).update!({
-      #     quantity:params[:quantity]
-      #   })
-      #   present book
-      #   end
-      # end
+      desc "update a book author"
+      params do
+        requires :id, type: Integer, desc: "Book id"
+      end
+      get do
+        book = Book.find(params[:id])
+        book.update(book_params)
+      end
 
 
     end

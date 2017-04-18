@@ -1,3 +1,4 @@
+
 Rails.application.routes.draw do
   mount AppStock::Base => '/'
   root to: 'books#index'
