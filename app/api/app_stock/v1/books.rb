@@ -21,7 +21,8 @@ module AppStock
         end
         route_param :id do
           get do
-            Book.find(params[:id]).flows
+            book = Book.find(params[:id])
+            present book, with: AppStock::Entities::Book
           end
         end
       end
