@@ -16,6 +16,11 @@ gem 'font-awesome-sass'
 gem 'simple_form'
 gem 'autoprefixer-rails'
 
+#api
+gem 'grape'
+gem 'hashie-forbidden_attributes'
+gem 'grape-entity'
+
 group :development, :test do
   gem 'binding_of_caller'
   gem 'better_errors'
