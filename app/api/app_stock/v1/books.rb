@@ -14,19 +14,6 @@ module AppStock
           present books
         end
 
-        # desc "update a book author"
-    		# params do
-    		#   requires :id, type: Integer, desc: "Book Id"
-        #   optional :quantity, type: Integer, desc: "Edit title."
-    		# end
-        # route_param :id do
-        #   patch do
-    		#   Book.find(params[:id]).update!({
-    		#     quantity:params[:quantity]
-    		#   })
-    		#   end
-        # end
-
         desc "Return a book"
         # Récupération d'une voiture spécifique grâce au paramètre passé dans l'url
         params do
@@ -39,6 +26,20 @@ module AppStock
           end
         end
       end
+
+      # desc "update a book author"
+      # params do
+      #   requires :id, type: Integer, desc: "Book Id"
+      # end
+      # route_param :id do
+      #   patch do
+      #   Book.find(params[:id]).update!({
+      #     quantity:params[:quantity]
+      #   })
+      #   present book
+      #   end
+      # end
+
 
     end
   end
