@@ -16,11 +16,12 @@ gem 'font-awesome-sass'
 gem 'simple_form'
 gem 'autoprefixer-rails'
 
-#API 
+#API
 gem 'grape'
 gem 'hashie-forbidden_attributes'
 gem 'grape-entity'
 gem 'grape_on_rails_routes'
+
 
 group :development, :test do
   gem 'binding_of_caller'
@@ -35,4 +36,5 @@ group :development, :test do
   gem 'poltergeist'
   gem 'launchy'
   gem 'minitest-reporters'
+  gem 'rack-test', '~> 0.6.3'
 end
