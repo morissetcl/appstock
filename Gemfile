@@ -15,8 +15,9 @@ gem 'bootstrap-sass'
 gem 'font-awesome-sass'
 gem 'simple_form'
 gem 'autoprefixer-rails'
+gem 'friendly_id', '~> 5.1.0'
 
-#API 
+#API
 gem 'grape'
 gem 'hashie-forbidden_attributes'
 gem 'grape-entity'
