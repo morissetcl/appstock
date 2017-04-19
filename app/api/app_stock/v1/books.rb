@@ -31,16 +31,14 @@ module AppStock
               end
             end
             post do
-              @book = Book.find(params[:id])
-              @flow = Flow.new(params[:flow])
-              if @flow = @book.flows.create!(params[:flow])
-                 @book.update(quantity: @flow.newQuantity)
+              book = Book.find(params[:id])
+              flow = Flow.new(params[:flow])
+              if flow = book.flows.create!(params[:flow])
+                 book.update(quantity: flow.newQuantity)
               end
-              puts params.inspect
             end
           end
         end
-
 
       end
     end
