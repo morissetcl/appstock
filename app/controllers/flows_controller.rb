@@ -6,7 +6,7 @@ class FlowsController < ApplicationController
   end
 
   def create
-    @book = Book.find(params[:book_id])
+    @book = Book.firendly.find(params[:book_id])
     @flow = Flow.new(flow_params)
     @flow = @book.flows.build(flow_params)
     @flow.book = @book
@@ -27,7 +27,7 @@ class FlowsController < ApplicationController
   private
 
   def set_book
-    @book = Book.find(params[:id])
+    @book = Book.friendly.find(params[:id])
   end
 
   def flow_params
