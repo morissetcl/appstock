@@ -1,9 +1,8 @@
 module AppStock
   module V1
     class Books < Grape::API
-      version 'v1', using: :path
-      format :json
-      prefix :api
+      include V1::Defaults
+
 
       resource :books do
         desc "Return list of books"
