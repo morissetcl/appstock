@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20170420082237) do
+ActiveRecord::Schema.define(version: 20170420170603) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -21,6 +21,7 @@ ActiveRecord::Schema.define(version: 20170420082237) do
     t.integer  "quantity"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.string   "comment"
     t.string   "slug"
     t.index ["slug"], name: "index_books_on_slug", unique: true, using: :btree
   end
@@ -31,6 +32,7 @@ ActiveRecord::Schema.define(version: 20170420082237) do
     t.integer  "book_id"
     t.datetime "created_at",  null: false
     t.datetime "updated_at",  null: false
+    t.string   "comment"
     t.index ["book_id"], name: "index_flows_on_book_id", using: :btree
   end
 
