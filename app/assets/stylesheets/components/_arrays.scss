@@ -5,9 +5,16 @@ th{
   padding-bottom: 30px;
   border: 1px solid black;
   padding-top: 30px;
+  background-color: #57D1C9;
+  color: white;
 }
 
 td{
   text-align: center;
   border: 1px solid black;
+}
+
+.form-wrapper{
+  display: flex;
+  justify-content: center;
 }
