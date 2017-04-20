@@ -4,6 +4,6 @@ class IndexHomTest < ActionDispatch::IntegrationTest
   test "loads correctly" do
       visit "books"
       assert_equal 200, page.status_code
-      assert page.has_content?("Index Books")
+      assert page.has_content?("Books")
     end
 end
