@@ -6,15 +6,15 @@ module AppStock
       prefix :api
 
       resource :books do
-        desc "Return list of books"
+        desc 'Return list of books'
         get do
           books = Book.all
-          present books,with: AppStock::Entities::Index
+          present books, with: AppStock::Entities::Index
         end
 
-        desc "Return a book"
+        desc 'Return a book'
         params do
-          requires :id, type: Integer, desc: "Book id"
+          requires :id, type: Integer, desc: 'Book id'
         end
         route_param :id do
           get do
@@ -33,15 +33,12 @@ module AppStock
             post do
               @book = Book.friendly.find(params[:id])
               @flow = Flow.new(params[:flow])
-              if @flow = @book.flows.create!(params[:flow])
-                 @book.update(quantity: @flow.newQuantity)
-              end
+              @flow = @book.flows.create!(params[:flow])
+              @book.update(quantity: @flow.newQuantity)
               puts params.inspect
             end
           end
         end
-
-
       end
     end
   end
