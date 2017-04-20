@@ -16,6 +16,7 @@ gem 'font-awesome-sass'
 gem 'simple_form'
 gem 'autoprefixer-rails'
 gem 'friendly_id', '~> 5.1.0'
+gem 'faker', '~> 1.7', '>= 1.7.3'
 
 #API
 gem 'grape'
@@ -26,7 +27,6 @@ gem 'grape_on_rails_routes'
 group :development, :test do
   gem 'binding_of_caller'
   gem 'better_errors'
-  gem 'faker', '~> 1.7', '>= 1.7.3'
   gem 'pry-byebug'
   gem 'pry-rails'
   gem 'spring'
