@@ -9,7 +9,7 @@ module AppStock
         desc "Return list of books"
         get do
           books = Book.all
-          present books
+          present books,with: AppStock::Entities::Index
         end
 
         desc "Return a book"
@@ -18,7 +18,7 @@ module AppStock
         end
         route_param :id do
           get do
-            book = Book.find(params[:id])
+            book = Book.friendly.find(params[:id])
             present book, with: AppStock::Entities::Book
           end
 
@@ -31,7 +31,7 @@ module AppStock
               end
             end
             post do
-              @book = Book.find(params[:id])
+              @book = Book.friendly.find(params[:id])
               @flow = Flow.new(params[:flow])
               if @flow = @book.flows.create!(params[:flow])
                  @book.update(quantity: @flow.newQuantity)
