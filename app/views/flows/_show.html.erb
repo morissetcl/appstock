@@ -3,5 +3,6 @@
       <td><%= flow.created_at.strftime("%m-%e-%y %H:%M") %></td>
       <td><%= flow.oldQuantity.nil? ? 0 : flow.oldQuantity%></td>
       <td><%= flow.newQuantity.nil? ? 0 : flow.newQuantity%></td>
+      <td><%= flow.comment.nil? ? 0 : flow.comment%></td>
     </tr>
   </tbody>

@@ -5,3 +5,6 @@ LOG:  database system is ready to accept connections
 ERROR:  database "appstock_development" is being accessed by other users
 DETAIL:  There is 1 other session using the database.
 STATEMENT:  DROP DATABASE IF EXISTS "appstock_development"
+ERROR:  database "appstock_development" is being accessed by other users
+DETAIL:  There is 1 other session using the database.
+STATEMENT:  DROP DATABASE IF EXISTS "appstock_development"
