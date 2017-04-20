@@ -27,6 +27,7 @@ module AppStock
               requires :flow, type: Hash do
                 requires :newQuantity, type: Integer, desc: 'New Stock.'
                 requires :oldQuantity, type: Integer, desc: 'Previous Stock.'
+                optional :comment, type: String, desc: 'Comment about new stock.'
               end
             end
             post do

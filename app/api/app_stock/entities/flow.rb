@@ -3,6 +3,7 @@ module AppStock
     class Flow < Grape::Entity
       expose :newQuantity
       expose :oldQuantity
+      expose :comment
       expose :created_at
     end
   end
