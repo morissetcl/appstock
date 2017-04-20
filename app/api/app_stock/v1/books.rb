@@ -33,9 +33,8 @@ module AppStock
               {id: params[:isbn]}
               @book = Book.friendly.find(params[:isbn])
               @flow = Flow.new(params[:flow])
-              @flow = @book.flows.create!(params[:flow])
+              @flow = @book.flows.create(params[:flow])
               @book.update(quantity: @flow.newQuantity)
-              puts params.inspect
             end
           end
         end
