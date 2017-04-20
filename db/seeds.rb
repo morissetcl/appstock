@@ -6,5 +6,5 @@ book_ids = Book.ids
 
 
 95.times do
-  Flow.create!(book_id: book_ids.sample, newQuantity: Faker::Number.between(2, 15), oldQuantity: Faker::Number.between(2, 15))
+  Flow.create!(book_id: book_ids.sample, newQuantity: Faker::Number.between(2, 15), oldQuantity: Faker::Number.between(2, 15), comment: Faker::ChuckNorris.fact)
 end
