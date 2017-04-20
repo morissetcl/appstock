@@ -1,14 +1,23 @@
-.form-content{
-  width: 250px;
-}
-
 .form-wrapper{
   display: flex;
   justify-content: center;
   margin-top: 50px;
 }
 
-
 .form-control{
   text-align: center;
+}
+
+.input-form-flow{
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+#flow_newQuantity{
+  margin-left: 10px;
+}
+
+#flow_comment{
+  margin-left: 30px;
 }

@@ -1,9 +1,10 @@
 <div class="form-content text-center">
-  <%= simple_form_for([@book, @flow], remote: true, update:
-    { success: "response", failure: "error"}) do |f| %>
-    <p id="reportalert"></p>
-    <%= f.input :oldQuantity, label: "Previous stock", input_html: {value: f.object.oldQuantity ||  @previous_quantity.nil? ? 0 : @previous_quantity } %>
-    <%= f.input :newQuantity, label: "New stock"%>
+  <%= simple_form_for([@book, @flow], remote: true) do |f| %>
+    <div class="input-form-flow">
+      <%= f.input :oldQuantity, label: "Previous stock", input_html: {value: f.object.oldQuantity ||  @previous_quantity.nil? ? 0 : @previous_quantity } %>
+      <%= f.input :newQuantity, label: "New stock"%>
+      <%= f.input :comment, label: "Comment", :input_html => {maxlength: 45} %>
+    </div>
     <%= f.submit "Update stock", class: "calltoaction-form" %>
   <% end %>
 </div>

@@ -31,7 +31,7 @@ class FlowsController < ApplicationController
   end
 
   def flow_params
-    params.require(:flow).permit(:oldQuantity, :newQuantity)
+    params.require(:flow).permit(:oldQuantity, :newQuantity, :comment)
   end
 
 end
