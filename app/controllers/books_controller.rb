@@ -1,6 +1,6 @@
 class BooksController < ApplicationController
   before_action :set_book, only: [:show]
-  before_action :bookFlows, only: [:show]
+  before_action :book_flows, only: [:show]
 
   def index
     @books = Book.all
@@ -8,7 +8,7 @@ class BooksController < ApplicationController
 
   def show
     @flow = Flow.new
-    # add default value to new_flow form at previous_stock field
+    # add default value to new_flow form to previous_stock field
     @previous_quantity = @flows.empty? ? '0' : @flows.last.newQuantity
   end
 
@@ -19,11 +19,11 @@ class BooksController < ApplicationController
   end
 
   def set_book
+    # friendly_id to find book by Isbn instead Id (let's check out book.rb)
     @book = Book.friendly.find(params[:id])
   end
 
-  def bookFlows
+  def book_flows
     @flows = @book.flows
   end
-
 end
