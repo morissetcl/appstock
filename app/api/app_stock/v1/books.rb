@@ -10,13 +10,13 @@ module AppStock
         get do
           {id: params[:isbn]}
           books = Book.all
-          present books, with: AppStock::Entities::Index
+          present books, with: AppStock::Entities::Index # use index entities to display correct data
         end
 
         desc "Return a book"
         route_param :isbn do
           get do
-            {id: params[:isbn]}
+            {id: params[:isbn]} # find by Isbn instead Id
             book = Book.friendly.find(params[:isbn])
             present book, with: AppStock::Entities::Book
           end
@@ -31,7 +31,7 @@ module AppStock
               end
             end
             post do
-              {id: params[:isbn]}
+              {id: params[:isbn]} # find by Isbn instead Id
               @book = Book.friendly.find(params[:isbn])
               @flow = Flow.new(params[:flow])
               @flow = @book.flows.create(params[:flow])
