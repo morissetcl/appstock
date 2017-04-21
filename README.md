@@ -20,7 +20,7 @@ Update quantity by creating new flow
 
 example:
 
-curl -i -X POST   \                                                                                  
-     -H 'Content-Type: application/json'     \
-     -d '{ "flow": { "newQuantity": 29, "oldQuantity": 11 } }'    \
-     http://localhost:3000/api/v1/books/1285/flows
+curl -i -X POST    \
+     -H 'Content-Type: application/json'    \
+     -d '{ "flow": { "newQuantity": 29, "oldQuantity": 11, "comment": "Won Goncourt" } }'  \
+     http://localhost:3000/api/v1/books/6993/flows
